@@ -1,0 +1,161 @@
+---
+title: "범죄 데이터 분석"
+description: |
+  범죄 데이터를 이용해서 코드 청크 사용 방법을 살펴봅니다. 그러나 생성된 웹 페이지만 본다면 단순한 데이터 분석에 대한 페이지로 인식됩니다.
+author:
+  - name: 홍길동 
+    url: https://choonghyunryu.github.io/
+    affiliation: 조원씨앤아이
+    affiliation_url: https://jowoncni.com/   
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 3  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      collapse = FALSE,
+                      fig.align = "center",
+                      tidy.opts = list(width.cutoff = 70), 
+                      tidy = TRUE)
+knitr::opts_chunk$set(fig.width = 12, fig.height = 9)
+
+library(tidyverse, warn.conflicts = FALSE)
+library(htmltools, warn.conflicts = FALSE)
+library(reticulate, warn.conflicts = FALSE)
+
+## Pointing to the right python installation
+use_condaenv(condaenv = "dev_python")
+```
+
+
+```{r}
+#| intro, 
+#| echo=FALSE, 
+#| out.width = "55%"
+knitr::include_graphics("img/python_with_r.png")
+```
+
+
+```{r, preface, echo=FALSE}
+div(class = "preface", 
+    h4("들어가기"),
+    "미국 범죄 데이터셋인 USArrests를 이용해서 간단한 분석 페이지를 생성합니다.", br(),
+    strong("여러분은 R과 Python 코드 청크를 이용해서 간단한 집계와 시각화를 수행합니다."))
+```
+
+<br>
+
+> 이 예제 페이지는 R과 Python 코드 청크를 이용해서 데이터 분석을 수행합니다. 
+
+## 시나리오
+
+데이터분석 내용을 정리한 웹 페이지를 상정하고, 간단한 분석 코드로 데이터를 탐색하는 웹페이지를 생성합니다.
+R과 Python 코드 청크를 사용하며, 옵션을 통해서 코드의 출력 형식이 변하는 것을 학습합니다.
+
+### 웹 페이지의 구성
+
+1. 데이터셋 소개
+1. 데이터 읽어오기
+    - Python으로 CSV 파일 읽어오기
+1. 데이터 형태 살펴보기
+    - Python으로 데이터셋의 일부를 출력
+    - R로 데이터셋의 일부를 출력
+        - 서식을 갖추어서 표로 출력
+1. 데이터 탐색
+    - 범죄가 많은 주 살펴보기
+        - R 이용
+    - 범죄 데이터의 분포 시각화로 살펴보기
+        - Python 이용
+         
+
+## Data: USArrests
+
+R의 `USArrests`는 미국 주별 강력 범죄율을 기록한 데이터입니다.
+
+### 데이터 구조
+
+이 데이터셋은 4개의 변수와 50개의 관측치로 구성된 데이터 프레임(data.frame) 객체입니다.:
+
+- Murder
+    - numeric. 살인범 검거 건수(100,000건당)
+- Assault
+    - numeric. 폭행범 검거 건수(100,000건당)
+- UrbanPop
+    - numeric. 도시 인구 비율(백분율)
+- Rape
+    - numeric. 강간범 검거 건수(100,000건당)    
+
+### 데이터 형태
+
+핸즈온을 위해서 data 디렉토리에 `usa_arrests.csv`라는 이름의 파일을 생성해 놓았습니다. 
+R의 `USArrests` 데이터를 CSV 파일로 만들어 놓은 것입니다.
+
+## 데이터 준비
+
+`usa_arrests.csv` 파일을 읽어 데이터 셋을 생성하고, 몇 건을 조회해 봅니다.
+
+### 데이터 준비
+
+Python 코드 청크로 데이터를 읽고 앞의 몇 건을 조회해 봅니다. 소스는 출력하지 않았습니다.
+
+```{python import-data}
+import pandas
+
+usa_arrests = pandas.read_csv('data/usa_arrests.csv')
+usa_arrests.head()
+```
+
+### 서식 갖춘 테이블로 조회
+
+R 코드 청크를 이용해서 데이터 몇 건을 표(tables)로 출력합니다. 코드는 출력하지 않습니다.
+
+```{r head-r, echo=FALSE}
+py$usa_arrests |> 
+  head() |> 
+  kableExtra::kbl(caption = "USArrests 데이터 형태") |> 
+  kableExtra::kable_classic(full_width = TRUE) 
+```
+
+
+## 데이터 탐색
+
+### 범죄가 많은 주 살펴보기
+
+살인범, 폭행범, 강간범의 수의 합계가 큰 상위 10개의 정보를 표(tables)로 출력합니다.
+출력 형식을 정의하는 코드가 제법 많이 포함된 R 코드 청크를 사용했습니다.
+
+```{r top10-state, echo=TRUE}
+py$usa_arrests |> 
+  arrange(desc(Murder + Assault + Rape)) |> 
+  filter(row_number() <= 10) |> 
+  select(1:3, 5, 4) |> 
+  rename(`주이름` = State) |>   
+  rename(`살인범` = Murder) |> 
+  rename(`폭행범` = Assault) |> 
+  rename(`강간범` = Rape) |> 
+  rename(`도시인구수(백분율)` = UrbanPop) |>   
+  kableExtra::kbl(caption = "미국 범죄 상위 10개 주 현황") |> 
+  kableExtra::add_header_above(c(" " = 1, "범죄자수 (인구 만명 당)" = 3, " " = 1)) |> 
+  kableExtra::kable_classic(full_width = TRUE) 
+```
+
+
+### 변수의 분포 파악
+
+네개의 수치 변수의 분포를 히스토 그램으로 그려 봅니다. 플롯은 Python 청크를 사용합니다. 데이터는 CSV 파일의 데이터가 아니라 R에 내장되어 있는 `USArrests` 데이터 프레임을 사용합니다.
+
+```{python}
+#| label: plot-histogram
+#| fig-cap: "수치변수의 히스토그램"
+#| fig-align: 'left'
+#| out-width: '90%'
+#| echo: true
+#| eval: true
+r.USArrests.hist(figsize = (12, 10));
+```
+

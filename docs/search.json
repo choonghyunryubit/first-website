@@ -1,0 +1,49 @@
+{
+  "articles": [
+    {
+      "path": "capstone_project.html",
+      "title": "Capstone Project",
+      "description": "우리는 이번 과정의 핵심 내용을 실습을 통해서 다시한번 다지고 나갑니다.\n",
+      "author": [],
+      "contents": "\n\nContents\n캡스톤 프로젝트\n학습 목표\n\n\n\n\n캡스톤 프로젝트\n캡스톤(Capstone)은 돌기둥이나 담 위 등 건축물의 정점에 놓인 장식, 최고의 업적·성취를 뜻하는 단어입니다. 본 과정에서의 캡스톤 프로젝트는 배운 내용을 정점에 놓을 수 있도록 하는 과정입니다.\n본 프로젝트는 Digital Authoring 학습에서의 중요한 웹 페이지 생성과 정형보고서 작성을, 간단한 데이터로 실습을 수행하는 프로젝트입니다. 이를 통해서 bitReport 기법의 개념정립과 활용 방법을 다시한번 체득하게 됩니다.\n학습 목표\nbitReport 템플리트를 이용해서 웹 사이트를 만들고, 슬라이드, 보고서, 대시보드를 작성할 수 있습니다.\n\n웹 사이트\n분석의 경험을 공유하거나 아카이빙하기 위한 웹 페이지를 생성합니다.\n한국R사용자회와 조원씨앤아이와 어울리는 디자인 서식 적용\n보고서\n분석 인사이트 기반의 PDF 파일 정형 보고서를 작성합니다.\n한국R사용자회와 조원씨앤아이와 어울리는 디자인 서식 적용\n슬라이드\n데이터 분석 과정에서 리뷰를 위한 프리젠테이션을 수행할 슬라이드를 작성합니다.\n파워포인트가 아닌 HTML5 기반의 동적 슬라이드 적용\n대시보드\n분석 인사이트를 버블리싱하는 웹 기반의 대시보드를 작성합니다.\n데이터 분석 결과의 동적 탐색이 가능한 독립형 대시보드 생성\n\n\n\n\n",
+      "last_modified": "2025-10-18T15:38:33+09:00"
+    },
+    {
+      "path": "index.html",
+      "title": "데이터 분석가를 위한 Digital Authoring",
+      "description": "데이터 리터러시 중에서 데이터 기반의 **인사이트를 표현하고 커뮤니케이션하는 역량은 상당히 중요**합니다. 이를 위한 **디지털 매체를 통한 소통 능력의 제고**를 위해서 **지식 경험을 내재화하는 웹 사이트** / **독립형 대시보드** / **프리젠테이션을 위한 웹 슬라이드** / **팬시한 정형 보고서**를 만드는 **Digital Authoring를 학습**합니다.\n",
+      "author": [],
+      "contents": "\n\nContents\n수업 일시 및 장소\n교육 형태와 방식\n\n수업 일시 및 장소\n일시:\n2025.11.05(수) 10:00 ~ 17:00\n2025.11.06(목) 10:00 ~ 17:00\n2025.11.07(금) 10:00 ~ 17:00\n\n장소:\n조원씨앤아이 교육장 (영등포구 국회대로74길 9)\n\n교육 형태와 방식\n교육 형태:\n이론과 실습 중심의 강의\n\n교육 방식:\n강의 / 실습\n\n\n\n\n",
+      "last_modified": "2025-10-18T15:38:33+09:00"
+    },
+    {
+      "path": "intro_digital_authoring.html",
+      "title": "Digital Authoring 소개",
+      "description": "일선에 배포할 통계분석 **보고서의 핵심은 비즈니스 인사이트의 제공**에 있습니다. **그러나** 인사이트 발굴을 위한 분석가의 노력과 더불어 보고서 서식을 만들고, 시각화 결과를 옮겨서 **문서를 편집하는 일련의 작업들에도 많은 리소스가 소비**됩니다. 이와 같은 **휴먼 리소스의 소비를 줄이고자 보고서 (반)자동화 방안을 고찰**합니다.\n",
+      "author": [
+        {
+          "name": "홍길동",
+          "url": "https://choonghyunryu.github.io/"
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\n\nContents\n디지털 리터러시와 디지털 글쓰기\n\n디지털 리터러시와 디지털 글쓰기\n디지털 사회인 현재는, 디지털 트랜스포메이션(digital transformation)을 화두로 기업은 비즈니스와 프로세스를 디지털화하는데 박차를 가하고 있습니다. 그리고 개인들에게는 디지털 리터러시(digital literacy)의 계발을 요구하고 있습니다.\n위키피이아의 디지털 리터러시 정의를 살펴보니 다음과 같습니다.:\n“디지털 리터러시 또는 디지털 문해력은 디지털 플랫폼의 다양한 미디어를 접하면서 명확한 정보를 찾고, 평가하고, 조합하는 개인의 능력을 뜻한다.”\n\n\n\n데이터 분석 조직원들은 디지털 리터러시의 최 선봉에 위치하고 있습니다. 매일 데이터를 탐구하고, 인사이트를 발굴하고, 인사이트 결과를 공유하거나 배포하는 작업을 수행하고 있기 때문입니다.\n\n\n\n",
+      "last_modified": "2025-10-18T15:38:33+09:00"
+    },
+    {
+      "path": "tiny_analytics.html",
+      "title": "범죄 데이터 분석",
+      "description": "범죄 데이터를 이용해서 코드 청크 사용 방법을 살펴봅니다. 그러나 생성된 웹 페이지만 본다면 단순한 데이터 분석에 대한 페이지로 인식됩니다.\n",
+      "author": [
+        {
+          "name": "홍길동",
+          "url": "https://choonghyunryu.github.io/"
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\n\nContents\n시나리오\n웹 페이지의 구성\n\nData: USArrests\n데이터 구조\n데이터 형태\n\n데이터 준비\n데이터 준비\n서식 갖춘 테이블로 조회\n\n데이터 탐색\n범죄가 많은 주 살펴보기\n변수의 분포 파악\n\n\n\n\n\n\n\n들어가기\n미국 범죄 데이터셋인 USArrests를 이용해서 간단한 분석 페이지를 생성합니다.\n여러분은 R과 Python 코드 청크를 이용해서 간단한 집계와 시각화를 수행합니다.\n\n\n\n\n이 예제 페이지는 R과 Python 코드 청크를 이용해서 데이터 분석을 수행합니다.\n\n시나리오\n데이터분석 내용을 정리한 웹 페이지를 상정하고, 간단한 분석 코드로 데이터를 탐색하는 웹페이지를 생성합니다.\nR과 Python 코드 청크를 사용하며, 옵션을 통해서 코드의 출력 형식이 변하는 것을 학습합니다.\n웹 페이지의 구성\n데이터셋 소개\n데이터 읽어오기\nPython으로 CSV 파일 읽어오기\n\n데이터 형태 살펴보기\nPython으로 데이터셋의 일부를 출력\nR로 데이터셋의 일부를 출력\n서식을 갖추어서 표로 출력\n\n\n데이터 탐색\n범죄가 많은 주 살펴보기\nR 이용\n\n범죄 데이터의 분포 시각화로 살펴보기\nPython 이용\n\n\nData: USArrests\nR의 USArrests는 미국 주별 강력 범죄율을 기록한 데이터입니다.\n데이터 구조\n이 데이터셋은 4개의 변수와 50개의 관측치로 구성된 데이터 프레임(data.frame) 객체입니다.:\nMurder\nnumeric. 살인범 검거 건수(100,000건당)\n\nAssault\nnumeric. 폭행범 검거 건수(100,000건당)\n\nUrbanPop\nnumeric. 도시 인구 비율(백분율)\n\nRape\nnumeric. 강간범 검거 건수(100,000건당)\n\n데이터 형태\n핸즈온을 위해서 data 디렉토리에 usa_arrests.csv라는 이름의 파일을 생성해 놓았습니다.\nR의 USArrests 데이터를 CSV 파일로 만들어 놓은 것입니다.\n데이터 준비\nusa_arrests.csv 파일을 읽어 데이터 셋을 생성하고, 몇 건을 조회해 봅니다.\n데이터 준비\nPython 코드 청크로 데이터를 읽고 앞의 몇 건을 조회해 봅니다. 소스는 출력하지 않았습니다.\n\nimport pandas\n\nusa_arrests = pandas.read_csv('data/usa_arrests.csv')\nusa_arrests.head()\n        State  Murder  Assault  UrbanPop  Rape\n0     Alabama    13.2      236        58  21.2\n1      Alaska    10.0      263        48  44.5\n2     Arizona     8.1      294        80  31.0\n3    Arkansas     8.8      190        50  19.5\n4  California     9.0      276        91  40.6\n\n서식 갖춘 테이블로 조회\nR 코드 청크를 이용해서 데이터 몇 건을 표(tables)로 출력합니다. 코드는 출력하지 않습니다.\n\n\nTable 1: USArrests 데이터 형태\n\n\nState\n\n\nMurder\n\n\nAssault\n\n\nUrbanPop\n\n\nRape\n\n\nAlabama\n\n\n13.2\n\n\n236\n\n\n58\n\n\n21.2\n\n\nAlaska\n\n\n10.0\n\n\n263\n\n\n48\n\n\n44.5\n\n\nArizona\n\n\n8.1\n\n\n294\n\n\n80\n\n\n31.0\n\n\nArkansas\n\n\n8.8\n\n\n190\n\n\n50\n\n\n19.5\n\n\nCalifornia\n\n\n9.0\n\n\n276\n\n\n91\n\n\n40.6\n\n\nColorado\n\n\n7.9\n\n\n204\n\n\n78\n\n\n38.7\n\n\n데이터 탐색\n범죄가 많은 주 살펴보기\n살인범, 폭행범, 강간범의 수의 합계가 큰 상위 10개의 정보를 표(tables)로 출력합니다.\n출력 형식을 정의하는 코드가 제법 많이 포함된 R 코드 청크를 사용했습니다.\n\n\npy$usa_arrests |>\n    arrange(desc(Murder + Assault + Rape)) |>\n    filter(row_number() <= 10) |>\n    select(1:3, 5, 4) |>\n    rename(주이름 = State) |>\n    rename(살인범 = Murder) |>\n    rename(폭행범 = Assault) |>\n    rename(강간범 = Rape) |>\n    rename(`도시인구수(백분율)` = UrbanPop) |>\n    kableExtra::kbl(caption = \"미국 범죄 상위 10개 주 현황\") |>\n    kableExtra::add_header_above(c(` ` = 1, `범죄자수 (인구 만명 당)` = 3,\n        ` ` = 1)) |>\n    kableExtra::kable_classic(full_width = TRUE)\n\n\nTable 2: 미국 범죄 상위 10개 주 현황\n\n\n\n\n\n범죄자수 (인구 만명 당)\n\n\n\n\n\n주이름\n\n\n살인범\n\n\n폭행범\n\n\n강간범\n\n\n도시인구수(백분율)\n\n\nFlorida\n\n\n15.4\n\n\n335\n\n\n31.9\n\n\n80\n\n\nNorth Carolina\n\n\n13.0\n\n\n337\n\n\n16.1\n\n\n45\n\n\nMaryland\n\n\n11.3\n\n\n300\n\n\n27.8\n\n\n67\n\n\nArizona\n\n\n8.1\n\n\n294\n\n\n31.0\n\n\n80\n\n\nNew Mexico\n\n\n11.4\n\n\n285\n\n\n32.1\n\n\n70\n\n\nCalifornia\n\n\n9.0\n\n\n276\n\n\n40.6\n\n\n91\n\n\nAlaska\n\n\n10.0\n\n\n263\n\n\n44.5\n\n\n48\n\n\nSouth Carolina\n\n\n14.4\n\n\n279\n\n\n22.5\n\n\n48\n\n\nNevada\n\n\n12.2\n\n\n252\n\n\n46.0\n\n\n81\n\n\nMichigan\n\n\n12.1\n\n\n255\n\n\n35.1\n\n\n74\n\n\n변수의 분포 파악\n네개의 수치 변수의 분포를 히스토 그램으로 그려 봅니다. 플롯은 Python 청크를 사용합니다. 데이터는 CSV 파일의 데이터가 아니라 R에 내장되어 있는 USArrests 데이터 프레임을 사용합니다.\n\nr.USArrests.hist(figsize = (12, 10));\n\n\nFigure 1: 수치변수의 히스토그램\n\n\n\n\n\n\n",
+      "last_modified": "2025-10-18T15:38:40+09:00"
+    }
+  ],
+  "collections": []
+}
